@@ -1,3 +1,120 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$site-font-size: 14px;
+$mobile-site-font-size: 14px;
+
+
+body {
+  background: url("main-bg.jpg") no-repeat center 0;
+  font-size: $site-font-size
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header-upper ul {
+  list-style: none;
+  & > li {
+    display: inline-block;
+    padding-right: 5px;
+  }
+}
+
+.country-info > ul {
+  li.language {
+  width: 43px;
+  padding-right: 0;
+    button {
+      padding: 6px 15px 6px 5px;
+    }
+  }
+}
+
+.user-links ul {
+    .flight button {
+      padding: 6px 15px 6px 5px;
+  }
+}
+
+.user-links {
+  text-align: right;
+}
+
+.search-bar > div {
+   background: #0084cf;
+}
+
+.header-upper,
+.search-bar {
+  background-color: transparent;
+  border: none;
+
+  &, & a {
+    color: #fff;
+  }
+
+  .country-info,
+  .user-links {
+    margin-top: 25px;
+  }
+
+  .country-info {
+
+  }
+
+  .user-links {
+
+  }
+
+  .btn:hover, .btn:focus {
+    color: #fff;
+  }
+
+}
+
+.navbar {
+  button {
+    .double-caret:before {
+      border-bottom: 4px solid #fff;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      content: "";
+      height: 0;
+      left: 4px;
+      position: absolute;
+      top: 4px;
+      width: 0;
+    }
+    .double-caret:after {
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid #fff;
+      bottom: 4px;
+      content: "";
+      height: 0;
+      left: 4px;
+      position: absolute;
+      width: 0;
+    }
+    .double-caret {
+      /*background: none repeat scroll 0 0 green;*/
+     /* height: 55px;*/
+      position: relative;
+      /*width: 10px;*/
+    }
+
+    background: none;
+
+  }
+
+  .open {
+    .dropdown-menu {
+      background-color: transparent;
+      min-width: 60px;
+    }
+  }
+}
