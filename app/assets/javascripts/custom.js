@@ -14,4 +14,12 @@ $(function() {
             $("#datepicker-in").datepicker("option","maxDate", selected)
         }
     });
+
+    $('.popbox').popbox({
+        'open'          : '.pop-open',
+        'box'           : '.box',
+        'arrow'         : '.arrow',
+        'arrow-border'  : '.arrow-border',
+        'close'         : '.close'
+    });
 });

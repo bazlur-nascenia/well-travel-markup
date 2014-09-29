@@ -10,6 +10,10 @@ body {
   font-size: $site-font-size
 }
 
+input[type="text"] {
+  outline: none;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -40,6 +44,10 @@ a:hover {
 
 .user-links {
   text-align: right;
+}
+
+a,.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: none;
 }
 
 .search-bar {
@@ -135,39 +143,49 @@ a:hover {
 
 }
 
+
+.double-caret:before {
+  border-bottom: 4px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  height: 0;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 0;
+}
+.double-caret:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  bottom: 4px;
+  content: "";
+  height: 0;
+  left: 4px;
+  position: absolute;
+  width: 0;
+}
+.double-caret {
+  /*background: none repeat scroll 0 0 green;*/
+  /* height: 55px;*/
+  position: relative;
+  /*width: 10px;*/
+}
+
+.popbox  {
+  img {
+    width: 55px;
+    height: 40px;
+    border-right: 1px solid #fff;
+    padding: 0px 5px 0px 10px;
+    margin-right: 9px;
+  }
+}
+
 .navbar {
   button {
-    .double-caret:before {
-      border-bottom: 4px solid #fff;
-      border-left: 4px solid transparent;
-      border-right: 4px solid transparent;
-      content: "";
-      height: 0;
-      left: 4px;
-      position: absolute;
-      top: 4px;
-      width: 0;
-    }
-    .double-caret:after {
-      border-left: 4px solid transparent;
-      border-right: 4px solid transparent;
-      border-top: 4px solid #fff;
-      bottom: 4px;
-      content: "";
-      height: 0;
-      left: 4px;
-      position: absolute;
-      width: 0;
-    }
-    .double-caret {
-      /*background: none repeat scroll 0 0 green;*/
-      /* height: 55px;*/
-      position: relative;
-      /*width: 10px;*/
-    }
-
     background: none;
-
   }
 
   .open {
@@ -176,4 +194,54 @@ a:hover {
       min-width: 60px;
     }
   }
+}
+
+.flight-classes,
+.flight-options {
+  & .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+  margin-right: 0;
+  margin-left: 0;
+  color: #000000;
+}
+
+.flight-options {
+  .oneway, .twoway, .pair-oneway {
+    float: left;
+  }
+
+  padding: 20px;
+}
+
+.flight-classes {
+  padding: 5px 20px 10px;
+  text-align: left;
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+}
+
+.attendance select {
+  background: transparent;
+  /*border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 2px 110px 2px 2px;
+  border: none;
+  background: transparent;
+  outline: none;
+  option {
+    color: #0084cf;
+  }*/
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  padding-right: 36px;
 }

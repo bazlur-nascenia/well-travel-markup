@@ -5,7 +5,11 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type='text/javascript'>
+      $(document).ready(function(){
 
+      });
+  </script>
 </head>
 
 <body>
@@ -85,34 +89,40 @@
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12">
           <div class="flight-ways">
             <a href="#"></a>
+            <div class='popbox'>
+              <a class='pop-open' href='#'><%=image_tag('flight-1way.png')%> <span class="double-caret"></span> </a>
+              <div class='drop-collapse'>
+                <div class='box'>
+                  <div class='arrow'></div>
+                  <div class='arrow-border'></div>
+                  <div class="row flight-options">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="oneway">
+                        <input type="radio"/><%= image_tag('flight-1way.png') %>
+                      </div>
+                      <div class="twoway">
+                        <input type="radio"/><%= image_tag('flight-1way.png') %>
+                      </div>
+                      <div class="pair-oneway">
+                        <input type="radio"/><%= image_tag('flight-1way.png') %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row flight-classes">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="row"><input type="radio"/><label> Economy </label></div>
+                      <div class="row"><input type="radio"/><label> Premium Economy </label></div>
+                      <div class="row"><input type="radio"/><label> Business </label></div>
+                      <div class="row"><input type="radio"/><label> First </label></div>
+                    </div>
+                  </div>
 
-            <div class="btn-group">
-              <button data-toggle="dropdown" class="btn dropdown-toggle">Flight<span class="double-caret"></span>
-              </button>
-              <div class="dropdown-menu">
-                <div class="row flight-ways">
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="oneway">
-                      <input type="radio"/><%= image_tag('flight-1way.png') %>
-                    </div>
-                    <div class="twoway">
-                      <input type="radio"/><%= image_tag('flight-1way.png') %>
-                    </div>
-                    <div class="pair-oneway">
-                      <input type="radio"/><%= image_tag('flight-1way.png') %>
-                    </div>
-                  </div>
-                </div>
-                <div class="row flight-classes">
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row"><input type="radio"/><label> Economy </label></div>
-                    <div class="row"><input type="radio"/><label> Premium Economy </label></div>
-                    <div class="row"><input type="radio"/><label> Business </label></div>
-                    <div class="row"><input type="radio"/><label> First </label></div>
-                  </div>
+                  <!--<a href="#" class="close">close</a>-->
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -125,39 +135,35 @@
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
           <div class="attendance">
-            2 Adults + 2 Children
-          </div>
-          </div>
-          <div class="col-lg-1 col-md-1col-sm-1 col-xs-12">
-            <div class="search">
-              <button class="btn btn-default" type="submit">Search</button>
-            </div>
+            <select>
+              <option>2 Adults + 2 Children</option>
+              <option>1 Adults + 2 Children</option>
+              <option>1 Adults + 1 Children</option>
+              </select>
           </div>
         </div>
-
-
-        <!--/.nav-collapse -->
+        <div class="col-lg-1 col-md-1col-sm-1 col-xs-12">
+          <div class="search">
+            <button class="btn btn-default" type="submit">Search</button>
+          </div>
+        </div>
       </div>
-      <!--/.container-fluid -->
+
+
+      <!--/.nav-collapse -->
     </div>
-
-    <!-- Main component for a primary marketing message or call to action -->
-
-
+    <!--/.container-fluid -->
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </div>
-  <div class="jumbotron">
-    <h1>Navbar example</h1>
 
-    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It
-      includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+  <!-- Main component for a primary marketing message or call to action -->
 
-    <p>
-      <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs »</a>
-    </p>
-  </div>
-  <!-- /container -->
 
-  <%= yield %>
+</div>
+er -->
+
 </div>
 </body>
 </html>
