@@ -4,6 +4,7 @@
 
 $site-font-size: 14px;
 $mobile-site-font-size: 14px;
+$site-text-color: #000;
 
 body {
   background: url("main-bg.jpg") no-repeat center 0;
@@ -57,17 +58,8 @@ a,.btn:focus, .btn:active:focus, .btn.active:focus {
     height: 40px;
   }
 
-  .row > div {
-    padding-right: 0;
-  }
-
   .row > div:not(:first-child) {
     padding-left: 5px;
-  }
-
-  .row > div:first-child {
-    padding-left: 0px;
-
   }
 
   .attendance,
@@ -244,4 +236,86 @@ a,.btn:focus, .btn:active:focus, .btn.active:focus {
   text-indent: 1px;
   text-overflow: '';
   padding-right: 36px;
+}
+
+.advertisement {
+  background: #fff;
+  height: 600px;
+  width: 100%;
+
+}
+
+.align-right {
+  text-align: right;
+}
+
+.main-content {
+  min-height: 299px;
+  /* webkit example */
+  background-image: -webkit-gradient(
+                  linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)),
+                  to(rgba(255,255,255,0.1))
+  );
+
+  /* mozilla example - FF3.6+ */
+  background-image: -moz-linear-gradient(
+                  rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 95%
+  );
+
+  color: #fff;
+}
+
+.navigation ul {
+  padding: 0;
+  li{
+    display: inline-block;
+    padding: 10px;
+
+
+  }
+  width: 100%;
+  background: #000;
+  height: 40px;
+}
+
+.airline-info {
+  padding: 15px;
+  a {
+    color: #fff;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    color: #000;
+  }
+
+  #myTabContent {
+    background-color: #fff;
+    color: $site-text-color;
+    padding: 15px;
+    height: 180px;
+  }
+
+  #myTab {
+    background-color: #000;
+    li a {
+      border-radius: 0;
+    }
+  }
+}
+
+
+.airline-details {
+  border-bottom: 5px solid #ffb900;
+}
+
+.air-line-filmstrip {
+  .header {
+    height: 40px;
+    background-color: #0084cf;
+    padding: 10px 15px;
+  }
+
+  img {
+    width: 100%;
+  }
 }
