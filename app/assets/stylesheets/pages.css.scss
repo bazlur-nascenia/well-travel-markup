@@ -288,11 +288,17 @@ a,.btn:focus, .btn:active:focus, .btn.active:focus {
     color: #000;
   }
 
+  p.codes {
+    color: #ffb900;
+    font-size: 25px;
+  }
+
   #myTabContent {
     background-color: #fff;
     color: $site-text-color;
     padding: 15px;
     height: 180px;
+    overflow: hidden;
   }
 
   #myTab {
@@ -303,9 +309,11 @@ a,.btn:focus, .btn:active:focus, .btn.active:focus {
   }
 }
 
-
 .airline-details {
   border-bottom: 5px solid #ffb900;
+  p {
+
+  }
 }
 
 .air-line-filmstrip {
@@ -317,5 +325,25 @@ a,.btn:focus, .btn:active:focus, .btn.active:focus {
 
   img {
     width: 100%;
+  }
+}
+
+.shares {
+
+  margin-top: 30px;
+
+  a {
+    width: 40px;
+    height: 40px;
+    background-color: #0084cf;
+    color: #000;
+    float: right;
+    margin-left: 5px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  a.icon-instagram {
+    margin-right: 30px;
   }
 }
